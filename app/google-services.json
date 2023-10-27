@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "790321461134",
+    "project_id": "bookreader-71ae5",
+    "storage_bucket": "bookreader-71ae5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790321461134:android:83956384c36574e69196df",
+        "android_client_info": {
+          "package_name": "com.example.bookreader"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDktw031-kKHof_WvlYXeX5_YKCBQY8yk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
