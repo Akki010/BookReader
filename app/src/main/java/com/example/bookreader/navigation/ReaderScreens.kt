@@ -1,11 +1,9 @@
 package com.example.bookreader.navigation
 
-import com.example.bookreader.screens.stats.StatsScreen
-
 enum class ReaderScreens {
     SplashScreen,
     LoginScreen,
-    CreateAccountScreen,
+    SignupScreen,
     ReaderHomeScreen,
     ReaderStatScreen,
     SearchScreen,
@@ -17,7 +15,7 @@ enum class ReaderScreens {
         = when(route?.substringBefore("/")){
             SplashScreen.name -> SplashScreen
             LoginScreen.name -> LoginScreen
-            CreateAccountScreen.name -> ReaderHomeScreen
+            SignupScreen.name -> ReaderHomeScreen
             SearchScreen.name -> SearchScreen
             DetailScreen.name -> DetailScreen
             UpdateScreen.name -> UpdateScreen

@@ -24,33 +24,38 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.bookreader.navigation.ReaderScreens
+import kotlinx.coroutines.delay
 
 
 @Composable
 fun SplashScreen(navController: NavController) {
-    Column(modifier = Modifier.fillMaxSize(),
+    Column(
+        modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center) {
-        SplashScreenCircle()
+        verticalArrangement = Arrangement.Center
+    ) {
+        SplashScreenCircle(navController)
     }
-
 }
 
 @Composable
-fun SplashScreenCircle() {
-    val scale = remember{ androidx.compose.animation.core.Animatable(0f) }
+fun SplashScreenCircle(navController: NavController) {
+    val scale = remember { androidx.compose.animation.core.Animatable(0f) }
 
     LaunchedEffect(key1 = 1, block = {
         scale.animateTo(
             targetValue = 0.9f,
             animationSpec = tween(
                 durationMillis = 800,
-                easing ={OvershootInterpolator(4f).getInterpolation(it)}
+                easing = { OvershootInterpolator(4f).getInterpolation(it) }
             )
         )
+        delay(500L)
+        navController.navigate(ReaderScreens.LoginScreen.name)
     })
-    Surface(
 
+    Surface(
         modifier = Modifier
             .wrapContentSize()
             .size(300.dp)
